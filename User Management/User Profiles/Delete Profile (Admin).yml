@@ -5,7 +5,7 @@ info:
 
 http:
   method: DELETE
-  url: "{{baseUrl}}/api/v1/user-management/profiles/:id"
+  url: "{{baseUrl}}/api/v1/profiles/:id"
   auth:
     type: bearer
     token: "{{token}}"

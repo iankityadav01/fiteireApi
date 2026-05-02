@@ -5,7 +5,7 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/api/v1/user-management/users/me"
+  url: "{{baseUrl}}/api/v1/users/me"
   headers:
     - name: Content-Type
       value: application/json

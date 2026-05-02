@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/v1/user-management/devices"
+  url: "{{baseUrl}}/api/v1/devices"
   auth:
     type: bearer
     token: "{{token}}"

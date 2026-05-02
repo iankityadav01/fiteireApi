@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/v1/user-management/users/:userId/preferences"
+  url: "{{baseUrl}}/api/v1/users/:userId/preferences"
   auth:
     type: bearer
     token: "{{token}}"

@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/v1/user-management/refresh-tokens/:id/revoke"
+  url: "{{baseUrl}}/api/v1/refresh-tokens/:id/revoke"
   auth:
     type: bearer
     token: "{{token}}"

@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/v1/user-management/users/me/sessions/revoke-all"
+  url: "{{baseUrl}}/api/v1/users/me/sessions/revoke-all"
   auth:
     type: bearer
     token: "{{token}}"

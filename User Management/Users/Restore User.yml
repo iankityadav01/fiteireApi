@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/v1/user-management/users/:id/restore"
+  url: "{{baseUrl}}/api/v1/users/:id/restore"
   auth:
     type: bearer
     token: "{{token}}"

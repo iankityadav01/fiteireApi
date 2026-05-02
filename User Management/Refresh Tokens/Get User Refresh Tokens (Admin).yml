@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/v1/user-management/users/:userId/refresh-tokens"
+  url: "{{baseUrl}}/api/v1/users/:userId/refresh-tokens"
   auth:
     type: bearer
     token: "{{token}}"

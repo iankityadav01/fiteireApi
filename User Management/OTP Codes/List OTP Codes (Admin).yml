@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/v1/user-management/otp-codes"
+  url: "{{baseUrl}}/api/v1/otp-codes"
   auth:
     type: bearer
     token: "{{token}}"

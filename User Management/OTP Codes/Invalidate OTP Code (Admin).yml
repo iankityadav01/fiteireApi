@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/v1/user-management/otp-codes/:id/invalidate"
+  url: "{{baseUrl}}/api/v1/otp-codes/:id/invalidate"
   auth:
     type: bearer
     token: "{{token}}"
