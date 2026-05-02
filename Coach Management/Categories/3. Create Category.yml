@@ -1,0 +1,29 @@
+info:
+  name: Create Category
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/coach-management/categories"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Yoga",
+        "description": "Yoga sessions",
+        "icon": "yoga-icon",
+        "sortOrder": 1
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMTQ0NjIzOC00YjNmLTRjMzctYmQwNC0yYTNlNDJiYWY1MzAiLCJ0ZW5hbnRJZCI6ImRlZmF1bHQiLCJlbWFpbCI6ImFkbWluQGZpdGVyaW8uY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzc3NjMyNzk3LCJleHAiOjE3NzgyMzc1OTcsImlzcyI6ImVycC1sb2dpc3RpY3MiLCJzdWIiOiIzMTQ0NjIzOC00YjNmLTRjMzctYmQwNC0yYTNlNDJiYWY1MzAifQ.D_RcHZMff_GPy9ZDD5Py-hMoqgk90ktVeoJPfYl5Z7U
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

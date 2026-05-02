@@ -1,0 +1,25 @@
+info:
+  name: Update Bank Account
+  type: http
+  seq: 2
+http:
+  method: PUT
+  url: "{{baseUrl}}/api/v1/coach-management/bank-account/me"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "bankName": "HDFC",
+        "accountName": "John Doe",
+        "accountNumber": "1234567890",
+        "ifscCode": "HDFC0001234"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

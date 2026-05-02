@@ -1,0 +1,24 @@
+info:
+  name: Apply as Coach
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/coach-management/coaches/me"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "bio": "I am an experienced coach.",
+        "experienceYears": 5,
+        "isOnline": true
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

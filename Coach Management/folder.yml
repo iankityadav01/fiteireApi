@@ -1,0 +1,6 @@
+info:
+  name: Coach Management
+  type: folder
+  seq: 4
+request:
+  auth: inherit

@@ -1,0 +1,22 @@
+info:
+  name: Add Specialty
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/coach-management/metadata/specialties"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Vinyasa Flow"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

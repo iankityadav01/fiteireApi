@@ -1,0 +1,13 @@
+info:
+  name: Get Category by Slug
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: "{{baseUrl}}/api/v1/coach-management/categories/:slug"
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

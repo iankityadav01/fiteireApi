@@ -1,0 +1,24 @@
+info:
+  name: Add Availability Slot
+  type: http
+  seq: 2
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/coach-management/availability/me"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "dayOfWeek": 1,
+        "startTime": "09:00",
+        "endTime": "10:00"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
