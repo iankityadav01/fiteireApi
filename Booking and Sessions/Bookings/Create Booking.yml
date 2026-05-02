@@ -1,0 +1,31 @@
+info:
+  name: Create Booking
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/booking-and-sessions/bookings"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "userId": "UUID_HERE",
+        "coachId": "UUID_HERE",
+        "categoryId": "UUID_HERE",
+        "scheduledAt": "2024-05-10T10:00:00Z",
+        "sessionFee": 1000,
+        "totalAmount": 1000,
+        "coachEarnings": 850,
+        "commissionRate": 0.15
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
