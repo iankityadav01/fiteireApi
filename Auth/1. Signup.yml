@@ -17,7 +17,8 @@ http:
         "lastName": "Yadav",
         "phone":"8901971436",
         "email": "raoankit0022@gmail.com",
-        "password": "Password123!"  
+        "password": "Password123!" ,
+       "roleId": "PASTE_YOUR_ROLE_UUID_HERE" 
       }
   auth: inherit
 
