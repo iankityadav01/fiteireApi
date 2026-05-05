@@ -1,0 +1,31 @@
+info:
+  name: 2. Create Ad
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/ad-management/ads"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "campaignId": "PASTE_CAMPAIGN_ID_HERE",
+        "title": "Summer Sale Ad",
+        "bodyText": "Get 20% off all fitness sessions this summer!",
+        "ctaLabel": "Book Now",
+        "ctaUrl": "https://fiteire.com/book",
+        "type": "BANNER",
+        "placement": "HOME_TOP",
+        "status": "DRAFT"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

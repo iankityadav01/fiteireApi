@@ -1,0 +1,28 @@
+info:
+  name: 4. Update Ad
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/ad-management/ads/:id"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: id
+      value: "PASTE_AD_ID_HERE"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Updated Summer Sale Ad",
+        "weight": 10
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

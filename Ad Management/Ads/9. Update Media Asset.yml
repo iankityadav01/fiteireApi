@@ -1,0 +1,27 @@
+info:
+  name: 9. Update Media Asset
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/ad-management/ads/media/:id"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: id
+      value: "PASTE_MEDIA_ASSET_ID_HERE"
+  body:
+    type: json
+    data: |-
+      {
+        "altText": "Updated Summer Sale Image"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

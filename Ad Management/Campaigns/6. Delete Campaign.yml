@@ -1,0 +1,18 @@
+info:
+  name: 6. Delete Campaign
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/api/v1/ad-management/campaigns/:id"
+  params:
+    - name: id
+      value: "PASTE_CAMPAIGN_ID_HERE"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

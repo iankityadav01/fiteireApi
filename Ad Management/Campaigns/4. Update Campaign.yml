@@ -1,0 +1,28 @@
+info:
+  name: 4. Update Campaign
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/ad-management/campaigns/:id"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: id
+      value: "PASTE_CAMPAIGN_ID_HERE"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Updated Summer Blast",
+        "totalBudget": 6000
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

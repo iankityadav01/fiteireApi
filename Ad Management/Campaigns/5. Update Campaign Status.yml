@@ -1,0 +1,27 @@
+info:
+  name: 5. Update Campaign Status
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/ad-management/campaigns/:id/status"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: id
+      value: "PASTE_CAMPAIGN_ID_HERE"
+  body:
+    type: json
+    data: |-
+      {
+        "status": "ACTIVE"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

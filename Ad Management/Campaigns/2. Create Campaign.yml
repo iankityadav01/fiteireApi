@@ -1,0 +1,33 @@
+info:
+  name: 2. Create Campaign
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/ad-management/campaigns"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Summer Fitness Blast",
+        "description": "Promotion for summer coaching sessions",
+        "advertiserName": "FitEire Marketing",
+        "status": "DRAFT",
+        "billingModel": "CPM",
+        "totalBudget": 5000,
+        "dailyBudgetCap": 500,
+        "startDate": "2026-06-01",
+        "endDate": "2026-08-31",
+        "priority": 5
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

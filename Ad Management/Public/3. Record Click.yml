@@ -1,0 +1,29 @@
+info:
+  name: 3. Record Click
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/ad-management/ads/:id/click"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: id
+      value: "PASTE_AD_ID_HERE"
+  body:
+    type: json
+    data: |-
+      {
+        "placement": "HOME_TOP",
+        "platform": "web",
+        "sessionId": "test-session-123"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

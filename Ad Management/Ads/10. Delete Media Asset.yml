@@ -1,0 +1,18 @@
+info:
+  name: 10. Delete Media Asset
+  type: http
+  seq: 10
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/api/v1/ad-management/ads/media/:id"
+  params:
+    - name: id
+      value: "PASTE_MEDIA_ASSET_ID_HERE"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,30 @@
+info:
+  name: 11. Upsert Targeting
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/ad-management/ads/:adId/targeting"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: adId
+      value: "PASTE_AD_ID_HERE"
+  body:
+    type: json
+    data: |-
+      {
+        "targetRole": "USER",
+        "minAge": 18,
+        "maxAge": 45,
+        "targetPlatforms": ["web", "ios"]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,31 @@
+info:
+  name: 4. Record Conversion
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/ad-management/ads/:id/conversion"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: id
+      value: "PASTE_AD_ID_HERE"
+  body:
+    type: json
+    data: |-
+      {
+        "placement": "HOME_TOP",
+        "platform": "web",
+        "userId": "PASTE_USER_ID_HERE",
+        "eventType": "BOOKING_COMPLETED",
+        "revenueValue": 100
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

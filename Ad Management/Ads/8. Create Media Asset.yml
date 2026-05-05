@@ -1,0 +1,30 @@
+info:
+  name: 8. Create Media Asset
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/ad-management/ads/:adId/media"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: adId
+      value: "PASTE_AD_ID_HERE"
+  body:
+    type: json
+    data: |-
+      {
+        "assetType": "image",
+        "url": "https://example.com/ad-image.jpg",
+        "altText": "Summer Sale Image",
+        "isPrimary": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

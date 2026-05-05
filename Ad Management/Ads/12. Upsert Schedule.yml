@@ -1,0 +1,30 @@
+info:
+  name: 12. Upsert Schedule
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/ad-management/ads/:adId/schedule"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: adId
+      value: "PASTE_AD_ID_HERE"
+  body:
+    type: json
+    data: |-
+      {
+        "activeDays": [1, 2, 3, 4, 5],
+        "startHour": 9,
+        "endHour": 18,
+        "timezone": "UTC"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
