@@ -1,0 +1,30 @@
+info:
+  name: 4. Create Payment
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/payment-financials/payments"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "bookingId": "PASTE_BOOKING_UUID_HERE",
+        "amount": 0,
+        "currency": "INR",
+        "method": "UPI",
+        "provider": "RAZORPAY",
+        "providerTxnId": "txn_1234567890",
+        "providerOrderId": "order_1234567890"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

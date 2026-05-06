@@ -1,0 +1,27 @@
+info:
+  name: 5. Update Coach Earning Status
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/payment-financials/coach-earnings/:id/status"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "status": "SUCCESS"
+      }
+  auth: inherit
+  params:
+    - name: id
+      value: "PASTE_COACH_EARNING_UUID_HERE"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
