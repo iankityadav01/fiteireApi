@@ -2,10 +2,14 @@ info:
   name: List Categories
   type: http
   seq: 1
+
 http:
   method: GET
   url: "{{baseUrl}}/api/v1/coach-management/categories"
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{token}}"
+
 settings:
   encodeUrl: true
   timeout: 0

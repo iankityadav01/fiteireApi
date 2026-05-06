@@ -17,7 +17,7 @@ config:
 request:
   variables:
     - name: baseUrl
-      value: http://192.168.1.7:5000
+      value: http://192.168.1.13:5000
     - name: token
       value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMTQ0NjIzOC00YjNmLTRjMzctYmQwNC0yYTNlNDJiYWY1MzAiLCJ0ZW5hbnRJZCI6ImRlZmF1bHQiLCJlbWFpbCI6ImFkbWluQGZpdGVyaW8uY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzc3NjIwMDcxLCJleHAiOjE3NzgyMjQ4NzEsImlzcyI6ImVycC1sb2dpc3RpY3MiLCJzdWIiOiIzMTQ0NjIzOC00YjNmLTRjMzctYmQwNC0yYTNlNDJiYWY1MzAifQ.AFU_xo9iHwxcnv9QTjSp3crgc78mpq8TPrQC-fkjH90
     - name: refreshToken
