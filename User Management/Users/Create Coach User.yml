@@ -1,0 +1,42 @@
+info:
+  name: Create Coach User
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/users/coach-users"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "user": {
+          "email": "coach.new@fiterio.com",
+          "phone": "9999999999",
+          "password": "Password123!"
+        },
+        "coachProfile": {
+          "firstName": "Amit",
+          "lastName": "Sharma",
+          "bio": "Certified coach",
+          "experienceYears": 5,
+          "startingPrice": 1500,
+          "currency": "INR",
+          "sessionDurationMins": 60,
+          "isOnline": true,
+          "isAvailableForOnline": true,
+          "isAvailableForOffline": false
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
