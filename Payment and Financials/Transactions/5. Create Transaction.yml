@@ -1,0 +1,32 @@
+info:
+  name: 5. Create Transaction
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/payment-financials/transactions"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "paymentId": "PASTE_PAYMENT_UUID_HERE",
+        "userId": "PASTE_USER_UUID_HERE",
+        "type": "BOOKING_PAYMENT",
+        "amount": 1000,
+        "currency": "INR",
+        "balanceBefore": 5000,
+        "balanceAfter": 4000,
+        "description": "Booking settlement",
+        "reference": "txn_ref_123456"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

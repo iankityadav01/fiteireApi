@@ -6,12 +6,9 @@ info:
 http:
   method: GET
   url: "{{baseUrl}}/api/v1/ad-management/campaigns"
-  query:
-    - name: page
-      value: 1
-    - name: limit
-      value: 10
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{token}}"
 
 settings:
   encodeUrl: true

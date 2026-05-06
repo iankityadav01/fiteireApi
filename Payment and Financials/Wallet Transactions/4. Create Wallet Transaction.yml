@@ -1,0 +1,28 @@
+info:
+  name: 4. Create Wallet Transaction
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/payment-financials/wallet-transactions"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "userId": "PASTE_USER_UUID_HERE",
+        "type": "REFUND",
+        "amount": 250,
+        "description": "Wallet credit from refund",
+        "reference": "wallet_txn_123456"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
