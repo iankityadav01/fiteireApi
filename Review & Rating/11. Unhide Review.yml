@@ -1,0 +1,21 @@
+info:
+  name: Unhide Review
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/reviews/admin/reviews/:id/unhide"
+  headers: []
+  body:
+    type: none
+  auth: inherit
+  params:
+    - name: id
+      value: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
