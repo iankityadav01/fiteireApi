@@ -1,0 +1,31 @@
+info:
+  name: 4. Create Payout
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/payment-financials/payouts"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "coachId": "PASTE_COACH_UUID_HERE",
+        "amount": 850,
+        "currency": "INR",
+        "periodStart": "2026-05-01T00:00:00.000Z",
+        "periodEnd": "2026-05-31T23:59:59.999Z",
+        "providerTxnId": "payout_1234567890",
+        "notes": "Monthly payout",
+        "earningIds": ["PASTE_COACH_EARNING_UUID_HERE"]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

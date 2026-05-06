@@ -1,0 +1,28 @@
+info:
+  name: 3. Create Refund
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/payment-financials/refunds"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "paymentId": "PASTE_PAYMENT_UUID_HERE",
+        "reason": "USER_CANCELLATION",
+        "amount": 500,
+        "providerRefundId": "refund_1234567890",
+        "notes": "Refund initiated after cancellation"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,27 @@
+info:
+  name: Update Admin Note
+  type: http
+  seq: 12
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/reviews/admin/reviews/:id/note"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "adminNote": "Reviewed and approved for display."
+      }
+  auth: inherit
+  params:
+    - name: id
+      value: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

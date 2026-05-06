@@ -1,0 +1,27 @@
+info:
+  name: Create Review
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/reviews"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "bookingId": "UUID_HERE",
+        "rating": 5,
+        "comment": "Great session and clear guidance.",
+        "isAnonymous": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

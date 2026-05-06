@@ -1,0 +1,29 @@
+info:
+  name: Update Review
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/reviews/:id"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "rating": 4,
+        "comment": "Updated after follow-up session.",
+        "isAnonymous": true
+      }
+  auth: inherit
+  params:
+    - name: id
+      value: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

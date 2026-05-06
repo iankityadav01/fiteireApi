@@ -1,0 +1,27 @@
+info:
+  name: Admin List Reviews
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/v1/reviews/admin"
+  headers: []
+  body:
+    type: none
+  auth: inherit
+  query:
+    - name: page
+      value: 1
+    - name: limit
+      value: 10
+    - name: sortBy
+      value: createdAt
+    - name: sortOrder
+      value: desc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
