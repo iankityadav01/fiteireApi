@@ -14,7 +14,11 @@ http:
     data: |-
       {
         "firstName": "John",
-        "lastName": "Doe"
+        "lastName": "Doe",
+        "displayName": "John D.",
+        "bio": "Updated bio",
+        "profileImage": "https://example.com/john-profile.jpg",
+        "coverPhoto": "https://example.com/john-cover.jpg"
       }
   auth:
     type: bearer

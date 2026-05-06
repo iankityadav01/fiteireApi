@@ -13,7 +13,9 @@ http:
     type: json
     data: |-
       {
-        "bio": "Admin updated bio"
+        "bio": "Admin updated bio",
+        "profileImage": "https://example.com/profile.jpg",
+        "coverPhoto": "https://example.com/cover.jpg"
       }
   auth:
     type: bearer

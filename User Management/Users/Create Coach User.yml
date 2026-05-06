@@ -21,7 +21,9 @@ http:
         "coachProfile": {
           "firstName": "Amit",
           "lastName": "Sharma",
-          "bio": "Certified coach",
+          "bio": "Certified coach with 5+ years experience",
+          "profileImage": "https://example.com/coach-profile.jpg",
+          "coverPhoto": "https://example.com/coach-cover.jpg",
           "experienceYears": 5,
           "startingPrice": 1500,
           "currency": "INR",

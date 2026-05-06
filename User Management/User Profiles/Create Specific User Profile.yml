@@ -14,7 +14,14 @@ http:
     data: |-
       {
         "firstName": "Admin",
-        "lastName": "User"
+        "lastName": "User",
+        "displayName": "Admin User",
+        "bio": "Admin profile bio",
+        "profileImage": "https://example.com/admin-profile.jpg",
+        "coverPhoto": "https://example.com/admin-cover.jpg",
+        "city": "New York",
+        "state": "NY",
+        "country": "USA"
       }
   auth:
     type: bearer

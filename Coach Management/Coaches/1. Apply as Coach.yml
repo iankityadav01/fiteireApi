@@ -12,9 +12,19 @@ http:
     type: json
     data: |-
       {
+        "firstName": "John",
+        "lastName": "Doe",
         "bio": "I am an experienced coach.",
+        "profileImage": "https://example.com/profile.jpg",
+        "coverPhoto": "https://example.com/cover.jpg",
         "experienceYears": 5,
-        "isOnline": true
+        "startingPrice": 500,
+        "currency": "INR",
+        "sessionDurationMins": 60,
+        "isOnline": true,
+        "isAvailableForOnline": true,
+        "isAvailableForOffline": false,
+        "introVideoUrl": "https://example.com/intro.mp4"
       }
   auth: inherit
 settings:

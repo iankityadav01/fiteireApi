@@ -1,0 +1,32 @@
+info:
+  name: Update My Coach Profile
+  type: http
+  seq: 2
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/coach-management/coaches/me"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "bio": "Updated bio - I specialize in fitness coaching.",
+        "profileImage": "https://example.com/profile-updated.jpg",
+        "coverPhoto": "https://example.com/cover-updated.jpg",
+        "experienceYears": 7,
+        "startingPrice": 600,
+        "currency": "INR",
+        "sessionDurationMins": 45,
+        "isAvailableForOnline": true,
+        "isAvailableForOffline": true
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
