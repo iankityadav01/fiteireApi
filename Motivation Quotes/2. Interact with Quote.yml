@@ -1,0 +1,32 @@
+info:
+  name: 2. Interact with Quote
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/motivation-quotes/{{quoteId}}/interact"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{token}}
+  body:
+    type: json
+    data: |-
+      {
+        "liked": true,
+        "shared": false
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: quoteId
+      value: 120d06d3-3e79-4239-a817-7c132a410a66
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

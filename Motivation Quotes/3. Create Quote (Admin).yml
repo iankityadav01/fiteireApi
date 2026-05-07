@@ -1,0 +1,32 @@
+info:
+  name: 3. Create Quote (Admin)
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/motivation-quotes"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{token}}
+  body:
+    type: json
+    data: |-
+      {
+        "text": "The only bad workout is the one that didn't happen.",
+        "author": "Unknown",
+        "category": "FITNESS",
+        "targetRole": "ALL",
+        "language": "en",
+        "status": "ACTIVE",
+        "weight": 100
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
