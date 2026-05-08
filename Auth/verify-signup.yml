@@ -1,0 +1,23 @@
+info:
+  name: verify-signup
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/auth/verify-signup"
+  body:
+    type: json
+    data: |
+      {
+          "email": "ankityadav20026758@gmail.com",
+          "otp": "463131", 
+          "signupToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFua2l0eWFkYXYyMDAyNjc1OEBnbWFpbC5jb20iLCJwaG9uZSI6IjkxOTI5Mzk0OTUiLCJmaXJzdE5hbWUiOiJSQUpBIiwibGFzdE5hbWUiOiJZYWRhdiIsInJvbGVJZCI6IjgxOGRlYzE3LWIwODQtNDYzOS05YjUzLTU2OGI4NGRkNzFhYSIsInBhc3N3b3JkSGFzaCI6IiQyYiQxMiQ3MTJrSkZiQk1tLkhPOGZGU2pvV05lUURhTWM2QnViVlpCWm5YVTN2dURnSi5UQXRVVkxMcSIsIm90cEhhc2giOiIwNmZkN2I0YTMyODk3NzE5Y2VjNmFmNTU0YmE1OTk4Y2NkMjY1ZGI0MzUzNDJlMmU1MmVmOWZhODJjYjNmNmRlIiwiZXhwaXJlc0F0IjoiMjAyNi0wNS0wOFQxMToxNjowNS45NzJaIiwiaWF0IjoxNzc4MjM4MzY1LCJleHAiOjE3NzgyMzg5NjUsImlzcyI6ImVycC1sb2dpc3RpY3MiLCJzdWIiOiJhbmtpdHlhZGF2MjAwMjY3NThAZ21haWwuY29tIn0.xnkCx_jeZZuyBGyC4R85jT7p8ZcCke175DLrVc_zcB8" 
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

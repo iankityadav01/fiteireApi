@@ -13,12 +13,12 @@ http:
     type: json
     data: |-
       {
-        "firstName": "Ankit",
+        "firstName": "RAJA",
         "lastName": "Yadav",
-        "phone":"8901971436",
-        "email": "raoankit0022@gmail.com",
+        "phone":"9192939495",
+        "email": "ankityadav20026758@gmail.com",
         "password": "Password123!" ,
-       "roleId": "PASTE_YOUR_ROLE_UUID_HERE" 
+       "roleId": "818dec17-b084-4639-9b53-568b84dd71aa" 
       }
   auth: inherit
 

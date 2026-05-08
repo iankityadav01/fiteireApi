@@ -2,10 +2,14 @@ info:
   name: Get My Coach Profile
   type: http
   seq: 2
+
 http:
   method: GET
   url: "{{baseUrl}}/api/v1/coach-management/coaches/me"
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{token}}"
+
 settings:
   encodeUrl: true
   timeout: 0
