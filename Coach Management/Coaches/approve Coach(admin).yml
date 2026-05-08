@@ -1,0 +1,37 @@
+info:
+  name: approve Coach(admin)
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/coach-management/coaches/admin/:id/approval"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: id
+      value: 4b41e38e-de0c-4e78-b9bc-0e636b996417
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "approvalStatus": "APPROVED"
+      }
+
+
+
+      // {
+      //   "approvalStatus": "REJECTED",
+      //   "rejectionReason": "Insufficient certification documents provided. Please upload clear copies of your fitness trainer certificate."
+      // }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
