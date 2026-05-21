@@ -8,7 +8,7 @@ http:
   url: "{{baseUrl}}/api/v1/coach-management/coaches/:id"
   params:
     - name: id
-      value: ""
+      value: 2f107673-de7c-4bea-98df-79e74f4d73e3
       type: path
   auth: inherit
 

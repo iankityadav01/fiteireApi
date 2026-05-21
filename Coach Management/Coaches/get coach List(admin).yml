@@ -1,11 +1,11 @@
 info:
-  name: Get My Coach Profile
+  name: get coach List(admin)
   type: http
-  seq: 2
+  seq: 6
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/v1/coach-management/coaches/me"
+  url: "{{baseUrl}}/api/v1/coach-management/coaches/admin/list"
   auth:
     type: bearer
     token: "{{token}}"
