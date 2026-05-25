@@ -8,21 +8,21 @@ http:
   url: "{{baseUrl}}/api/v1/users/:userId/profile"
   headers:
     - name: Content-Type
-      value: application/json
+      value: multipart/form-data
   body:
-    type: json
+    type: form
     data: |-
-      {
-        "firstName": "Admin",
-        "lastName": "User",
-        "displayName": "Admin User",
-        "bio": "Admin profile bio",
-        "profileImage": "https://example.com/admin-profile.jpg",
-        "coverPhoto": "https://example.com/admin-cover.jpg",
-        "city": "New York",
-        "state": "NY",
-        "country": "USA"
-      }
+      # Form fields (use multipart/form-data)
+      firstName=Admin
+      lastName=User
+      displayName=Admin User
+      bio=Admin profile bio
+      city=New York
+      state=NY
+      country=USA
+      # To upload a file, include the file field and set `target` to either `profileImage` or `coverPhoto`
+      target=profileImage
+      file=@/path/to/admin-profile.jpg
   auth:
     type: bearer
     token: "{{token}}"

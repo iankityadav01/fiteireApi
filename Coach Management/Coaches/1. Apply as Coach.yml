@@ -7,25 +7,25 @@ http:
   url: "{{baseUrl}}/api/v1/coach-management/coaches/me"
   headers:
     - name: Content-Type
-      value: application/json
+      value: multipart/form-data
   body:
-    type: json
+    type: form
     data: |-
-      {
-        "firstName": "John",
-        "lastName": "Doe",
-        "bio": "I am an experienced coach.",
-        "profileImage": "https://example.com/profile.jpg",
-        "coverPhoto": "https://example.com/cover.jpg",
-        "experienceYears": 5,
-        "startingPrice": 500,
-        "currency": "INR",
-        "sessionDurationMins": 60,
-        "isOnline": true,
-        "isAvailableForOnline": true,
-        "isAvailableForOffline": false,
-        "introVideoUrl": "https://example.com/intro.mp4"
-      }
+      # Apply as coach (multipart/form-data)
+      firstName=John
+      lastName=Doe
+      bio=I am an experienced coach.
+      experienceYears=5
+      startingPrice=500
+      currency=INR
+      sessionDurationMins=60
+      isOnline=true
+      isAvailableForOnline=true
+      isAvailableForOffline=false
+      introVideoUrl=https://example.com/intro.mp4
+      # To upload an image, include file and set target to profileImage or coverPhoto
+      target=profileImage
+      file=@/path/to/profile.jpg
   auth: inherit
 settings:
   encodeUrl: true

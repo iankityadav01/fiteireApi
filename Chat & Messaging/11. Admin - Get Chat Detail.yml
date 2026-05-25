@@ -1,0 +1,12 @@
+info:
+  name: 11. Admin - Get Chat Detail
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/v1/chat/admin/chats/:chatId"
+  headers: []
+  body:
+    type: none
+  auth: inherit

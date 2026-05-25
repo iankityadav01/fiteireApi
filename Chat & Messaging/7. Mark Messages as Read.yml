@@ -1,0 +1,12 @@
+info:
+  name: 7. Mark Messages as Read
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/chat/chats/:chatId/messages/read"
+  headers: []
+  body:
+    type: none
+  auth: inherit

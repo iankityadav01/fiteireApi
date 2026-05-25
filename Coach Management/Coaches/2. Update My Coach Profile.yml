@@ -7,23 +7,23 @@ http:
   url: "{{baseUrl}}/api/v1/coach-management/coaches/me"
   headers:
     - name: Content-Type
-      value: application/json
+      value: multipart/form-data
   body:
-    type: json
+    type: form
     data: |-
-      {
-        "firstName": "John",
-        "lastName": "Doe",
-        "bio": "Updated bio - I specialize in fitness coaching.",
-        "profileImage": "https://example.com/profile-updated.jpg",
-        "coverPhoto": "https://example.com/cover-updated.jpg",
-        "experienceYears": 7,
-        "startingPrice": 600,
-        "currency": "INR",
-        "sessionDurationMins": 45,
-        "isAvailableForOnline": true,
-        "isAvailableForOffline": true
-      }
+      # Update my coach profile (multipart)
+      firstName=John
+      lastName=Doe
+      bio=Updated bio - I specialize in fitness coaching.
+      experienceYears=7
+      startingPrice=600
+      currency=INR
+      sessionDurationMins=45
+      isAvailableForOnline=true
+      isAvailableForOffline=true
+      # Upload replacement image
+      target=coverPhoto
+      file=@/path/to/cover-updated.jpg
   auth: inherit
 settings:
   encodeUrl: true

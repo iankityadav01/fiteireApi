@@ -1,0 +1,18 @@
+info:
+  name: 4. Toggle Chat Archive
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/chat/chats/:chatId/archive"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "isArchived": true
+      }
+  auth: inherit

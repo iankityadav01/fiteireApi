@@ -8,18 +8,18 @@ http:
   url: "{{baseUrl}}/api/v1/users/me/profile"
   headers:
     - name: Content-Type
-      value: application/json
+      value: multipart/form-data
   body:
-    type: json
+    type: form
     data: |-
-      {
-        "firstName": "John",
-        "lastName": "Doe",
-        "displayName": "John D.",
-        "bio": "Updated bio",
-        "profileImage": "https://example.com/john-profile.jpg",
-        "coverPhoto": "https://example.com/john-cover.jpg"
-      }
+      # Multipart form to update profile (current user)
+      firstName=John
+      lastName=Doe
+      displayName=John D.
+      bio=Updated bio
+      # To upload an image, include file and set target to profileImage or coverPhoto
+      target=profileImage
+      file=@/path/to/john-profile.jpg
   auth:
     type: bearer
     token: "{{token}}"

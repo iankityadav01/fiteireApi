@@ -1,0 +1,19 @@
+info:
+  name: 1. Create or Retrieve Chat
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/chat/chats"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "participantId": "UUID_HERE",
+        "bookingId": "UUID_HERE_OPTIONAL"
+      }
+  auth: inherit

@@ -1,0 +1,12 @@
+info:
+  name: 13. Admin - Get Message History
+  type: http
+  seq: 13
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/v1/chat/admin/chats/:chatId/messages?limit=30&direction=OLDER"
+  headers: []
+  body:
+    type: none
+  auth: inherit

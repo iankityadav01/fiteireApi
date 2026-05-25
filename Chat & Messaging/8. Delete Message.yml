@@ -1,0 +1,12 @@
+info:
+  name: 8. Delete Message
+  type: http
+  seq: 8
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/api/v1/chat/chats/:chatId/messages/:messageId"
+  headers: []
+  body:
+    type: none
+  auth: inherit

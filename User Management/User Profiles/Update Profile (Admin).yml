@@ -8,15 +8,14 @@ http:
   url: "{{baseUrl}}/api/v1/profiles/:id"
   headers:
     - name: Content-Type
-      value: application/json
+      value: multipart/form-data
   body:
-    type: json
+    type: form
     data: |-
-      {
-        "bio": "Admin updated bio",
-        "profileImage": "https://example.com/profile.jpg",
-        "coverPhoto": "https://example.com/cover.jpg"
-      }
+      # Admin update profile (multipart)
+      bio=Admin updated bio
+      target=coverPhoto
+      file=@/path/to/new-cover.jpg
   auth:
     type: bearer
     token: "{{token}}"

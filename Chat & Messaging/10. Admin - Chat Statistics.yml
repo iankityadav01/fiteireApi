@@ -1,0 +1,12 @@
+info:
+  name: 10. Admin - Chat Statistics
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/v1/chat/admin/stats"
+  headers: []
+  body:
+    type: none
+  auth: inherit
