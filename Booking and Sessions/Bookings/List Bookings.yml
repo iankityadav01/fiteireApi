@@ -6,10 +6,9 @@ info:
 http:
   method: GET
   url: "{{baseUrl}}/api/v1/booking-and-sessions/bookings"
-  headers: []
-  body:
-    type: none
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{token}}"
 
 settings:
   encodeUrl: true

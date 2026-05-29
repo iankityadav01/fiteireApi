@@ -1,0 +1,37 @@
+info:
+  name: 6. Initiate Booking Payment
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/payment-financials/payments/initiate-booking-payment"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "userId": "PASTE_USER_UUID_HERE",
+        "coachId": "PASTE_COACH_UUID_HERE",
+        "categoryId": "PASTE_CATEGORY_UUID_HERE",
+        "sessionType": "ONLINE",
+        "scheduledAt": "2024-12-31T10:00:00.000Z",
+        "durationMins": 60,
+        "timeZone": "Asia/Kolkata",
+        "sessionFee": 1000,
+        "platformFee": 100,
+        "couponDiscount": 0,
+        "totalAmount": 1100,
+        "coachEarnings": 900,
+        "commissionRate": 0.1,
+        "notes": "First booking via Stripe"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

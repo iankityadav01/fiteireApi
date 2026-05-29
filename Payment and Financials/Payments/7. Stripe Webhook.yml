@@ -1,0 +1,40 @@
+info:
+  name: 7. Stripe Webhook
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/webhooks/stripe"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: stripe-signature
+      value: "YOUR_TEST_WEBHOOK_SIGNATURE"
+  body:
+    type: json
+    data: |-
+      {
+        "id": "evt_test_123",
+        "object": "event",
+        "type": "payment_intent.succeeded",
+        "data": {
+          "object": {
+            "id": "pi_test_123",
+            "object": "payment_intent",
+            "metadata": {
+              "userId": "UUID",
+              "coachId": "UUID",
+              "categoryId": "UUID",
+              "idempotencyKey": "book_123"
+            }
+          }
+        }
+      }
+  auth: none
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -2,6 +2,7 @@ info:
   name: Update My Coach Profile
   type: http
   seq: 2
+
 http:
   method: PATCH
   url: "{{baseUrl}}/api/v1/coach-management/coaches/me"
@@ -11,20 +12,17 @@ http:
   body:
     type: form
     data: |-
-      # Update my coach profile (multipart)
-      firstName=John
-      lastName=Doe
-      bio=Updated bio - I specialize in fitness coaching.
-      experienceYears=7
-      startingPrice=600
-      currency=INR
-      sessionDurationMins=45
-      isAvailableForOnline=true
-      isAvailableForOffline=true
-      # Upload replacement image
-      target=coverPhoto
-      file=@/path/to/cover-updated.jpg
+      # Update profile image: Set 'file' (File) and 'target' = 'profileImage'
+      # Update cover photo: Set 'file' (File) and 'target' = 'coverPhoto'
+      file=@/path/to/image.jpg
+      target=profileImage
+      firstName=Ankit
+      lastName=Yadavv
+      bio=Updated coach bio
+      experienceYears=5
+      startingPrice=1200
   auth: inherit
+
 settings:
   encodeUrl: true
   timeout: 0
