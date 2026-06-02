@@ -1,0 +1,28 @@
+info:
+  name: 12. Create Notification Type
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/admin/notifications/types"
+  auth: inherit
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "slug": "TEST_TYPE",
+        "label": "Test Type",
+        "description": "desc",
+        "category": "SYSTEM",
+        "defaultChannels": ["IN_APP"]
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

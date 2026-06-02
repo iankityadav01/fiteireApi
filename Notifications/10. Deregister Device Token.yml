@@ -1,0 +1,15 @@
+info:
+  name: 10. Deregister Device Token
+  type: http
+  seq: 10
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/api/v1/notifications/device-tokens/:token"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

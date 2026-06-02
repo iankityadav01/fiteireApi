@@ -1,0 +1,27 @@
+info:
+  name: 16. Create Broadcast Batch
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/admin/notifications/batches"
+  auth: inherit
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Promo",
+        "notificationTypeId": "uuid",
+        "channels": ["IN_APP"],
+        "audienceFilter": {}
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
