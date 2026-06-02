@@ -1,0 +1,28 @@
+info:
+  name: Upload Reel
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/reels"
+  headers:
+    - name: Content-Type
+      value: multipart/form-data
+  body:
+    type: form
+    data: |-
+      caption=Check out this amazing backhand tennis tutorial! 🎾
+      duration=15.5
+      sizeMB=3.4
+      format=mp4
+      file=@/path/to/video.mp4
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: Admin Update Settings
+  type: http
+  seq: 17
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/reels/admin/settings"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "maxReelsPerCoach": 5,
+        "maxReelDurationSeconds": 30,
+        "maxCompressedSizeMB": 10
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
