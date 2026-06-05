@@ -1,0 +1,28 @@
+info:
+  name: 3. Update Admin Config
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/admin-moderation/admin-configs/:key"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: key
+      value: "chat_duration"
+  body:
+    type: json
+    data: |-
+      {
+        "value": "48",
+        "description": "The duration (in hours) after a session ends during which a user can chat with the coach."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

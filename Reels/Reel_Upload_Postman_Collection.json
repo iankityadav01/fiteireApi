@@ -1,0 +1,87 @@
+{
+  "info": {
+    "_postman_id": "a90df2cd-bc39-4d6d-96ab-269e38d6df02",
+    "name": "Reel Upload Test",
+    "description": "Postman collection to test the single Reel Upload endpoint on FitÉire.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Upload Reel",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "caption",
+              "value": "Check out this amazing backhand tennis tutorial! 🎾",
+              "description": "Optional caption for the reel (max 500 characters)",
+              "type": "text"
+            },
+            {
+              "key": "duration",
+              "value": "15.5",
+              "description": "Required video duration in seconds",
+              "type": "text"
+            },
+            {
+              "key": "sizeMB",
+              "value": "3.4",
+              "description": "Required video size in megabytes",
+              "type": "text"
+            },
+            {
+              "key": "format",
+              "value": "mp4",
+              "description": "Optional video format",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "description": "Required video file payload (select your video in Postman)",
+              "type": "file",
+              "src": []
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/reels",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "reels"
+          ]
+        },
+        "description": "Uploads a single video reel. Uses multer middleware (expects 'file' form field) and uploads directly to Cloudinary."
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "YOUR_COACH_JWT_TOKEN_HERE",
+      "type": "string"
+    }
+  ]
+}

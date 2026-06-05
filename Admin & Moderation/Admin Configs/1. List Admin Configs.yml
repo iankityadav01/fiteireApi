@@ -1,14 +1,12 @@
 info:
-  name: List Bookings
+  name: 1. List Admin Configs
   type: http
   seq: 1
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/v1/booking-and-sessions/bookings/list"
-  auth:
-    type: bearer
-    token: "{{token}}"
+  url: "{{baseUrl}}/api/v1/admin-moderation/admin-configs"
+  auth: inherit
 
 settings:
   encodeUrl: true

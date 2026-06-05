@@ -5,14 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/v1/booking-and-sessions/bookings/:id/history"
-  headers: []
-  body:
-    type: none
-  auth: inherit
-  params:
-    - name: id
-      value: ""
+  url: "{{baseUrl}}/api/v1/booking-and-sessions/bookings/511c24cd-8118-45dd-b665-0338026617f3/history"
+  auth:
+    type: bearer
+    token: "{{token}}"
 
 settings:
   encodeUrl: true

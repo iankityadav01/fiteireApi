@@ -1,0 +1,27 @@
+info:
+  name: 1. Create Flag Report
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/admin-moderation/moderation/reports"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "targetType": "reel",
+        "targetId": "PASTE_TARGET_UUID_HERE",
+        "reason": "Inappropriate content",
+        "description": "This reel contains content violating terms of service."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
