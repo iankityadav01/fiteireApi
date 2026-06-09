@@ -1,0 +1,13 @@
+info:
+  name: Delete Date Unavailability
+  type: http
+  seq: 11
+http:
+  method: DELETE
+  url: "{{baseUrl}}/api/v1/coach-management/availability/me/unavailability-dates/:id"
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

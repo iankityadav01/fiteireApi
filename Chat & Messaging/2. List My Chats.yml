@@ -6,7 +6,12 @@ info:
 http:
   method: GET
   url: "{{baseUrl}}/api/v1/chat/chats?page=1&limit=20&status=ACTIVE"
-  headers: []
-  body:
-    type: none
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

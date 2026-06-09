@@ -1,0 +1,23 @@
+info:
+  name: Add Weekly Slot Unavailability
+  type: http
+  seq: 12
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/coach-management/availability/me/availability/:availabilityId/slots-unavailability"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "startTime": "11:00",
+        "endTime": "12:00"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
